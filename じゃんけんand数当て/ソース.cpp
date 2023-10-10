@@ -16,22 +16,22 @@ void oruncho() {
         cout << "『デバック用』 相手の手" << hand[enemi] << endl;
 #endif      
         for (int i = 0; i < 3; i++) {
-            cout << i + 1 << "= 『" << hand[i] << "』 ";
+            cout << i  << "= 『" << hand[i] << "』 ";
         }
         cout << endl;
         cin >> player;
 
-        if (1 <= player && player <= 3) {
+        if (0 <= player && player <= 2) {
             if (player == enemi) {
-                cout << "貴方の手 " << hand[player - 1] << " 相手の手 " << hand[enemi] << endl;
+                cout << "貴方の手 " << hand[player] << " 相手の手 " << hand[enemi] << endl;
                 cout << "結果は『あいこ』です" << endl;
             }
-            else if (player < enemi || (player == 3 && enemi == 0)) {
-                cout << "貴方の手 " << hand[player - 1] << " 相手の手 " << hand[enemi] << endl;
+            else if (player < enemi ) {
+                cout << "貴方の手 " << hand[player] << " 相手の手 " << hand[enemi] << endl;
                 cout << "結果は『負け』です" << endl;
             }
             else {
-                cout << "貴方の手 " << hand[player - 1] << " 相手の手 " << hand[enemi] << endl;
+                cout << "貴方の手 " << hand[player] << " 相手の手 " << hand[enemi] << endl;
                 cout << "結果は『勝ち』です" << endl;
             }
         }
